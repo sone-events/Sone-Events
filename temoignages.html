@@ -3,50 +3,172 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Témoignages - Sone Events</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Sone Events - Témoignages</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #f2f2f2;
+      color: #111;
+    }
+
+    header {
+      background-color: #000;
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 1px solid #333;
+      position: relative;
+    }
+
+    body.light-mode header {
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
+    }
+
+    header img {
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    body.light-mode header nav ul li a {
+      color: black;
+    }
+
+    header nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    #dark-mode-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: 1px solid white;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    body.light-mode #dark-mode-toggle {
+      border: 1px solid black;
+      color: black;
+    }
+
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .testimonials {
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .testimonial {
+      background-color: #222;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    .testimonial p {
+      margin: 0 0 10px;
+    }
+
+    .testimonial .author {
+      font-style: italic;
+      color: #aaa;
+    }
+
+    body.light-mode .testimonial {
+      background-color: #eee;
+    }
+
+    body.light-mode .testimonial .author {
+      color: #555;
+    }
+  </style>
+
   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.remove("light-mode");
+      document.getElementById("dark-mode-toggle").textContent = "☀️";
+    });
+
     function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
+      const body = document.body;
+      const toggleBtn = document.getElementById("dark-mode-toggle");
+
+      body.classList.toggle("light-mode");
+
+      if (body.classList.contains("light-mode")) {
+        toggleBtn.textContent = "🌙";
+      } else {
+        toggleBtn.textContent = "☀️";
+      }
     }
   </script>
 </head>
 <body>
   <header>
-    <div class="top-bar">
-      <div class="social-icons">
-        <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="mailto:contact@soneevents.com"><i class="fas fa-envelope"></i></a>
-      </div>
-      <div>
-        <a href="index.html"><img src="logo.png" alt="Sone Events Logo" class="logo" /></a>
-      </div>
-      <div class="lang-switch">
-        🌐 <a href="index.html">FR</a> | <a href="index_en.html">EN</a>
-        <button onclick="toggleDarkMode()">🌙</button>
-      </div>
-    </div>
-    <nav class="nav-links">
+    <button id="dark-mode-toggle" onclick="toggleDarkMode()">☀️</button>
+    <a href="index.html"><img src="logo.png" alt="Logo Sone Events"></a>
+    <nav>
       <ul>
+        <li><a href="index.html">Accueil</a></li>
         <li><a href="devis.html">Devis</a></li>
         <li><a href="temoignages.html">Témoignages</a></li>
         <li><a href="articles.html">Articles</a></li>
-        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="gallery.html">Galerie</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <h1>Témoignages</h1>
   </header>
 
-  <section>
-    <h2>Témoignages</h2>
-    <p>Découvrez ce que nos clients disent de nous.</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Sone Events - Tous droits réservés</p>
-  </footer>
+  <main>
+    <h1>Ils nous ont fait confiance</h1>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"Un mariage inoubliable grâce à Sone Events ! L'ambiance était parfaite du début à la fin."</p>
+        <p class="author">– Sarah & Julien</p>
+      </div>
+      <div class="testimonial">
+        <p>"Nous avons fait appel à eux pour notre soirée d'entreprise, tout le monde a dansé jusqu'au bout de la nuit."</p>
+        <p class="author">– Sophie, RH chez TechCorp</p>
+      </div>
+      <div class="testimonial">
+        <p>"Super équipe, très à l’écoute. Ils ont su s’adapter à notre style et aux invités. Merci !"</p>
+        <p class="author">– Karim B.</p>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
