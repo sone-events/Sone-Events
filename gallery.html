@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sone Events - Galerie</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #f2f2f2;
+      color: #111;
+    }
+
+    header {
+      background-color: #000;
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 1px solid #333;
+      position: relative;
+    }
+
+    body.light-mode header {
+      background-color: #fff;
+      border-bottom: 1px solid #ccc;
+    }
+
+    header img {
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    body.light-mode header nav ul li a {
+      color: black;
+    }
+
+    header nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    #dark-mode-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: 1px solid white;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    body.light-mode #dark-mode-toggle {
+      border: 1px solid black;
+      color: black;
+    }
+
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .gallery a img {
+      max-width: 280px;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery a:hover img {
+      transform: scale(1.05);
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.remove("light-mode");
+      document.getElementById("dark-mode-toggle").textContent = "☀️";
+    });
+
+    function toggleDarkMode() {
+      const body = document.body;
+      const toggleBtn = document.getElementById("dark-mode-toggle");
+
+      body.classList.toggle("light-mode");
+
+      if (body.classList.contains("light-mode")) {
+        toggleBtn.textContent = "🌙";
+      } else {
+        toggleBtn.textContent = "☀️";
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <button id="dark-mode-toggle" onclick="toggleDarkMode()">☀️</button>
+    <a href="index.html"><img src="logo.png" alt="Logo Sone Events"></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="devis.html">Devis</a></li>
+        <li><a href="temoignages.html">Témoignages</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="gallery.html">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Notre Galerie</h1>
+    <div class="gallery">
+      <a href="photo1.jpg" data-lightbox="sone-gallery" data-title="Soirée d'été 2023"><img src="photo1.jpg" alt="Soirée 1" /></a>
+      <a href="photo2.jpg" data-lightbox="sone-gallery" data-title="Mariage prestige"><img src="photo2.jpg" alt="Mariage" /></a>
+      <a href="photo3.jpg" data-lightbox="sone-gallery" data-title="Anniversaire ambiance"><img src="photo3.jpg" alt="Anniversaire" /></a>
+      <!-- Ajoute plus de photos ici -->
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+</body>
+</html>
