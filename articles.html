@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Articles - Sone Events</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="social-icons">
+        <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="mailto:contact@soneevents.com"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div>
+        <a href="index.html"><img src="logo.png" alt="Sone Events Logo" class="logo" /></a>
+      </div>
+      <div class="lang-switch">
+        🌐 <a href="index.html">FR</a> | <a href="index_en.html">EN</a>
+        <button onclick="toggleDarkMode()">🌙</button>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="devis.html">Devis</a></li>
+        <li><a href="temoignages.html">Témoignages</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Articles</h1>
+  </header>
+
+  <section>
+    <h2>Nos articles en vedette</h2>
+    <p>Nos dernières actualités, conseils et idées pour vos événements.</p>
+    <div class="article-images">
+      <img src="article1.jpg" alt="Article 1" style="width: 45%; margin: 10px;" />
+      <img src="article2.jpg" alt="Article 2" style="width: 45%; margin: 10px;" />
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sone Events - Tous droits réservés</p>
+  </footer>
+</body>
+</html>
