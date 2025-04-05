@@ -3,10 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sone Events - DJ & Événements Privés</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Sone Events - Accueil</title>
+
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #000;
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 1px solid #333;
+      position: relative;
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    #dark-mode-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: 1px solid white;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+  </style>
+
   <script>
+    // Activer le dark mode par défaut
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("dark-mode");
+    });
+
     function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
     }
@@ -15,46 +75,23 @@
 <body>
 
   <header>
-    <div class="top-bar">
-      <!-- Réseaux sociaux -->
-      <div class="social-icons">
-        <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="mailto:contact@soneevents.com"><i class="fas fa-envelope"></i></a>
-      </div>
-
-      <!-- Logo -->
-      <div>
-        <a href="index.html"><img src="logo.png" alt="Sone Events Logo" class="logo" /></a>
-      </div>
-
-      <!-- Langue + Dark Mode -->
-      <div class="lang-switch">
-        🌐 <a href="index.html">FR</a> | <a href="index_en.html">EN</a>
-        <button onclick="toggleDarkMode()">🌙</button>
-      </div>
-    </div>
-
-    <nav class="nav-links">
+    <button id="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+    <nav>
       <ul>
+        <li><a href="index.html">Accueil</a></li>
         <li><a href="devis.html">Devis</a></li>
         <li><a href="temoignages.html">Témoignages</a></li>
         <li><a href="articles.html">Articles</a></li>
-        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="gallery.html">Galerie</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-
-    <h1>Bienvenue chez Sone Events</h1>
   </header>
 
-  <section>
-    <h2>Présentation</h2>
-    <p>Sone Events est une association de DJ passionnés proposant des prestations musicales pour mariages, anniversaires, soirées d’entreprise, bals et bien d'autres événements privés. Ambiance garantie, service personnalisé et souvenirs inoubliables.</p>
-  </section>
+  <main>
+    <h1>Bienvenue sur Sone Events</h1>
+    <p>Un duo de DJs pour faire de vos événements un moment inoubliable : mariages, anniversaires, soirées privées et plus encore.</p>
+  </main>
 
-  <footer>
-    <p>&copy; 2025 Sone Events - Tous droits réservés</p>
-  </footer>
 </body>
 </html>
