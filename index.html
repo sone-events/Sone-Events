@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sone Events - Accueil</title>
 
-  <!-- On garde la feuille CSS mais on neutralise son effet sur le header -->
-  <link rel="stylesheet" href="styles.css?v=2">
-
   <style>
     body {
       background-color: #111;
@@ -24,7 +21,7 @@
     }
 
     header {
-      background-color: #000 !important; /* Forçage de couleur noire */
+      background-color: #000;
       padding: 20px 0;
       text-align: center;
       border-bottom: 1px solid #333;
@@ -32,11 +29,12 @@
     }
 
     body.light-mode header {
-      background-color: #fff !important;
+      background-color: #fff;
       border-bottom: 1px solid #ccc;
     }
 
     header img {
+      height: 50px;
       margin-bottom: 10px;
     }
 
@@ -86,6 +84,7 @@
       padding: 40px;
       text-align: center;
     }
+    <link rel="stylesheet" href="styles.css?v=2">
   </style>
 
   <script>
@@ -112,6 +111,7 @@
 
   <header>
     <button id="dark-mode-toggle" onclick="toggleDarkMode()">☀️</button>
+    <!-- ✅ Classe ajoutée ici -->
     <a href="index.html"><img src="logo.png" alt="Logo Sone Events" class="logo"></a>
     <nav>
       <ul>
