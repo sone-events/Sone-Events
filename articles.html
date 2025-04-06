@@ -88,7 +88,25 @@ body.light-mode header nav ul li a {
 body.light-mode .logo {
   filter: invert(100%);
 }
-  </style>
+  
+    #dark-mode-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: 1px solid white;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    body.light-mode #dark-mode-toggle {
+      border: 1px solid black;
+      color: black;
+    }
+</style>
+
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
