@@ -126,6 +126,21 @@
     button:hover {
       background-color: #555;
     }
+    /* Mode clair : corriger l'en-tête et les liens */
+body.light-mode header {
+  background-color: #fff !important;
+  background-image: none !important;
+  color: black;
+}
+
+/* Mode clair : liens dans le menu */
+body.light-mode header nav ul li a {
+  color: black !important;
+}
+
+/* Mode clair : logo inversé */
+body.light-mode .logo {
+  filter: invert(100%);
   </style>
 
   <script>
