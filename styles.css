@@ -47,7 +47,8 @@ footer {
   padding: 10px;
 }
 .logo {
-  height: 50px;
+  height: 100px;
+  width: auto;
 }
 .social-icons a {
   color: white;
