@@ -141,6 +141,22 @@ body.light-mode header nav ul li a {
 /* Mode clair : logo inversé */
 body.light-mode .logo {
   filter: invert(100%);
+
+  .btn-call {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffd700;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn-call:hover {
+  background-color: #e6be00;
+}
   </style>
 
  <script>
@@ -200,7 +216,7 @@ body.light-mode .logo {
       <input type="email" placeholder="Email" required>
       <textarea placeholder="Votre message" rows="5" required></textarea>
       <button type="submit">Envoyer</button>
-      <p>📞 Téléphone : <a href="tel:+33612345678">06 12 34 56 78</a></p>
+      <a href="tel:+33775721589" class="btn-call">Appeler</a>
     </form>
   </main>
 
