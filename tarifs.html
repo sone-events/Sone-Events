@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sone Events - Tarifs</title>
+<!-- ✅ Ce lien doit être ici, en dehors de <style> -->
+<link href="styles.css?v=2" rel="stylesheet"/>
+<style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #f2f2f2;
+      color: #111;
+    }
+
+    header {
+      background-color: #000 !important;
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 1px solid #333;
+      position: relative;
+    }
+
+    body.light-mode header {
+      background-color: #fff !important;
+      border-bottom: 1px solid #ccc;
+    }
+
+    header img {
+      margin-bottom: 10px;
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+
+    header nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    body.light-mode header nav ul li a {
+      color: black !important;
+    }
+
+    header nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    #dark-mode-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: 1px solid white;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    body.light-mode #dark-mode-toggle {
+      border: 1px solid black;
+      color: black;
+    }
+
+    body.light-mode .logo {
+      filter: invert(100%);
+    }
+
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .tarifs {
+      
+    }
+
+    
+.tarif {
+  background-color: #1c1c1c;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+.tarif:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.2);
+}
+.tarif h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.tarif ul {
+  list-style: none;
+  padding-left: 0;
+}
+.tarif ul li::before {
+  content: "✔";
+  color: #ffd700;
+  margin-right: 8px;
+}
+
+      background-color: #222;
+      padding: 1rem;
+      border-radius: 10px;
+      min-width: 300px;
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      border: 1px solid #555;
+    }
+
+    .tarif h3 {
+      color: #ffd700;
+    }
+
+    body.light-mode 
+.tarif {
+  background-color: #1c1c1c;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+.tarif:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.2);
+}
+.tarif h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.tarif ul {
+  list-style: none;
+  padding-left: 0;
+}
+.tarif ul li::before {
+  content: "✔";
+  color: #ffd700;
+  margin-right: 8px;
+}
+
+      background-color: #eee;
+      color: #111;
+      border: 1px solid #aaa;
+    }
+
+    body.light-mode .tarif h3 {
+      color: #cc9900;
+    }
+  
+    .logo {
+      height: 100px;
+      width: auto;
+    }
+    
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #ffd700;
+  color: #111;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.tarif.basic {
+  border-left: 4px solid #aaa;
+}
+
+.tarif.gold {
+  border-left: 4px solid #ffd700;
+}
+
+.tarif.prestige {
+  border-left: 4px solid #8e44ad;
+}
+
+.tarif.options {
+  border-left: 4px solid #5dade2;
+}
+
+.tarif {
+  animation: fadeIn 0.8s ease both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pack-header {
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-align: left;
+}
+
+.basic .pack-header {
+  background-color: #aaa;
+  color: #111;
+}
+.gold .pack-header {
+  background-color: #ffd700;
+  color: #111;
+}
+.prestige .pack-header {
+  background-color: #8e44ad;
+  color: white;
+}
+.options .pack-header {
+  background-color: #3498db;
+  color: white;
+}
+
+.pack-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffd700;
+  margin: 1rem 0 1rem;
+}
+
+.tarif:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.25);
+}
+
+.pack-title {
+  text-align: center;
+  margin: 1rem 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.basic-title {
+  color: #aaa;
+}
+.gold-title {
+  color: #ffd700;
+}
+.prestige-title {
+  color: #8e44ad;
+}
+.options-title {
+  color: #3498db;
+}
+
+.pack-price {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.basic-price {
+  color: #bbb;
+  text-shadow: 0 0 5px rgba(200, 200, 200, 0.3);
+}
+
+.gold-price {
+  color: #ffd700;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
+}
+
+.prestige-price {
+  color: #bb6bd9;
+  text-shadow: 0 0 6px rgba(142, 68, 173, 0.5);
+}
+
+.options-price {
+  color: #5dade2;
+  text-shadow: 0 0 6px rgba(52, 152, 219, 0.5);
+}
+
+.pack-price:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+
+.pack-title {
+  text-align: center;
+  margin: 1rem 0 0.5rem;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.basic-title {
+  color: #aaa;
+  text-shadow: 0 0 5px rgba(180, 180, 180, 0.4);
+}
+.gold-title {
+  color: #ffd700;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.6);
+}
+.prestige-title {
+  color: #bb6bd9;
+  text-shadow: 0 0 6px rgba(142, 68, 173, 0.6);
+}
+.options-title {
+  color: #5dade2;
+  text-shadow: 0 0 6px rgba(52, 152, 219, 0.5);
+}
+
+.pack-title:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.1);
+}
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedMode = localStorage.getItem("theme");
+      const body = document.body;
+      const toggleBtn = document.getElementById("dark-mode-toggle");
+
+      if (savedMode === "light") {
+        body.classList.add("light-mode");
+        toggleBtn.textContent = "🌙";
+      } else {
+        body.classList.remove("light-mode");
+        toggleBtn.textContent = "☀️";
+      }
+    });
+
+    function toggleDarkMode() {
+      const body = document.body;
+      const toggleBtn = document.getElementById("dark-mode-toggle");
+
+      body.classList.toggle("light-mode");
+
+      if (body.classList.contains("light-mode")) {
+        toggleBtn.textContent = "🌙";
+        localStorage.setItem("theme", "light");
+      } else {
+        toggleBtn.textContent = "☀️";
+        localStorage.setItem("theme", "dark");
+      }
+    }
+  </script>
+</head>
+<body>
+<header>
+<button id="dark-mode-toggle" onclick="toggleDarkMode()">☀️</button>
+<a href="index.html"><img alt="Logo Sone Events" class="logo" src="logo.png"/></a>
+<nav>
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="tarifs.html">Tarifs</a></li>
+<li><a href="temoignages.html">Témoignages</a></li>
+<li><a href="articles.html">Articles</a></li>
+<li><a href="gallery.html">Galerie</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<h1>Nos Tarifs</h1>
+<div class="tarifs">
+<div class="tarif basic">
+<a class="pack-link" href="contact.html"><h3 class="pack-title basic-title">💼 PACK DJ BASIC</h3></a><a class="pack-link" href="contact.html"><div class="pack-price basic-price">250€ TTC</div></a>
+<ul>
+<li>Matériel Son Dancefloor : 2 enceintes sur pied</li>
+<li>Lumières : barre lumières automatiques (LEDs, motifs, laser)</li>
+<li>4h de prestation DJ avec playlist sur mesure</li>
+</ul>
+</div>
+<div class="tarif gold">
+<a class="pack-link" href="contact.html"><h3 class="pack-title gold-title">⭐ PACK DJ GOLD</h3></a><a class="pack-link" href="contact.html"><div class="pack-price gold-price">450€ TTC</div></a>
+<ul>
+<li>Son complet : 2 enceintes + caisson de basse + micros sans fil</li>
+<li>Lumières : barre auto + 2 lyres sur totem</li>
+<li>5h de prestation DJ avec playlist sur mesure</li>
+</ul>
+</div>
+<div class="tarif prestige">
+<a class="pack-link" href="contact.html"><h3 class="pack-title prestige-title">👑 PACK DJ PRESTIGE</h3></a><a class="pack-link" href="contact.html"><div class="pack-price prestige-price">800€ TTC</div></a>
+<ul>
+<li>Son/Lumières complet</li>
+<li>Sonorisation de lieux supplémentaires</li>
+<li>Écran vidéo et gestion médias</li>
+<li>Coordination de la soirée</li>
+<li>6h de prestation DJ avec playlist sur mesure</li>
+</ul>
+</div>
+<div class="tarif options">
+<a class="pack-link" href="contact.html"><h3 class="pack-title options-title">➕ OPTIONS SUR DEVIS</h3></a><a class="pack-link" href="contact.html"><div class="pack-price options-price"><span class="options-title">Veuillez nous contacter via la page <a href="contact.html" style="color: inherit; text-decoration: underline;">Contact</a> pour établir un devis personnalisé.</span></div></a>
+<ul>
+<li>Matériel supplémentaire : son, lumière, vidéo, machine à fumée, scintillants, etc.</li>
+<li>Animations : magicien, danseurs/danseuses, jeux de feu...</li>
+<li>Transports supplémentaires, kilométrages hors 06, etc.</li>
+</ul>
+</div>
+</div>
+</main>
+</body>
+</html>
