@@ -343,6 +343,117 @@
   cursor: pointer;
   box-shadow: 0 0 14px rgba(255, 255, 255, 0.1);
 }
+
+
+/* Harmonisation white mode - logo + dark mode bouton déjà OK */
+
+body.light-mode .tarif {
+  background-color: #f8f8f8;
+  color: #111;
+  border: 1px solid #ccc;
+}
+
+body.light-mode .basic-title {
+  color: #666;
+  text-shadow: none;
+}
+body.light-mode .gold-title {
+  color: #bfa100;
+  text-shadow: none;
+}
+body.light-mode .prestige-title {
+  color: #954bbb;
+  text-shadow: none;
+}
+body.light-mode .options-title {
+  color: #217dbb;
+  text-shadow: none;
+}
+
+body.light-mode .basic-price {
+  color: #666;
+  text-shadow: none;
+}
+body.light-mode .gold-price {
+  color: #bfa100;
+  text-shadow: none;
+}
+body.light-mode .prestige-price {
+  color: #954bbb;
+  text-shadow: none;
+}
+body.light-mode .options-price {
+  color: #217dbb;
+  text-shadow: none;
+}
+
+body.light-mode .pack-title:hover,
+body.light-mode .pack-price:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+body.light-mode .options-price a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+
+body.light-mode header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+body.light-mode header nav ul li a {
+  color: black;
+}
+
+body.light-mode #dark-mode-toggle {
+  border: 1px solid black;
+  color: black;
+}
+
+body.light-mode header img.logo {
+  filter: invert(1);
+}
+
+
+body.light-mode header {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #ccc;
+}
+
+body.light-mode header nav ul li a {
+  color: #000 !important;
+}
+
+body.light-mode #dark-mode-toggle {
+  border: 1px solid black;
+  color: black;
+}
+
+body.light-mode header img.logo {
+  filter: invert(1);
+}
+
+/* Renforcement header white mode */
+body.light-mode header {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #ccc !important;
+}
+
+body.light-mode header nav ul li a {
+  color: #000 !important;
+}
+
+body.light-mode #dark-mode-toggle {
+  border: 1px solid black !important;
+  color: black !important;
+}
+
+body.light-mode header img.logo {
+  filter: invert(1);
+}
 </style>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -380,13 +491,12 @@
 <button id="dark-mode-toggle" onclick="toggleDarkMode()">☀️</button>
 <a href="index.html"><img alt="Logo Sone Events" class="logo" src="logo.png"/>
 <nav>
-  <ul>
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="tarifs.html">Tarifs</a></li>
-    <li><a href="articles.html">Articles</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="tarifs.html">Tarifs</a></li>
+<li><a href="articles.html">Articles</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
 </nav>
 </a></header>
 <main>
