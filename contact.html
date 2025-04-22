@@ -243,6 +243,17 @@ Envoyer : ✉️
   </a>
   </a>
   </main>
-
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get("success") === "true") {
+    const msg = document.createElement("div");
+    msg.textContent = "✅ Merci ! Votre message a bien été envoyé.";
+    msg.style.color = "#0f0";
+    msg.style.textAlign = "center";
+    msg.style.marginTop = "30px";
+    msg.style.fontWeight = "bold";
+    document.querySelector("form").after(msg);
+  }
+</script>
 </body>
 </html>
