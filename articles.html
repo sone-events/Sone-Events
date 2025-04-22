@@ -1,15 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Articles – Sone Events</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"/>
-
-  <!-- ✅ Ce lien doit être ici, en dehors de <style> -->
-  <link rel="stylesheet" href="styles.css?v=2">
-  
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Articles – Sone Events</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet"/>
+<!-- ✅ Ce lien doit être ici, en dehors de <style> -->
+<link href="styles.css?v=2" rel="stylesheet"/>
+<style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -127,11 +126,7 @@ body.light-mode .logo {
       color: #333 !important;
     }
 </style>
-
-
-
-
-  <script>
+<script>
   document.addEventListener("DOMContentLoaded", () => {
     const savedMode = localStorage.getItem("theme");
     const body = document.body;
@@ -162,39 +157,33 @@ body.light-mode .logo {
   }
 </script>
 </head>
-
 <body>
-
-  <header>
-    <button id="dark-mode-toggle" onclick="toggleDarkMode()">☀️</button>
-
-    <a href="index.html">
-      <img src="logo.png" alt="Logo Sone Events" class="logo">
-    </a>
-   <nav>
-  <ul>
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="tarifs.html">Tarifs</a></li>
-    <li><a href="articles.html">Articles</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+<header>
+<button id="dark-mode-toggle" onclick="toggleDarkMode()">☀️</button>
+<a href="index.html">
+<img alt="Logo Sone Events" class="logo" src="logo.png"/>
+</a>
+<nav>
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="tarifs.html">Tarifs</a></li>
+<li><a href="articles.html">Articles</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
 </nav>
-  </header>
-
-  <h1>Revue de presse</h1>
-  <p class="intro">
+</header><main style="padding: 40px; text-align: center;"><h1>Revue de presse</h1><p class="intro">
     Voici quelques extraits de presse mettant en avant l'engagement et les événements animés par Sone Events.
-  </p>
+  </p><div class="gallery">
+<a data-lightbox="articles" href="nice-matin-page-7.jpg">
+<img alt="Nice-Matin page 7" src="nice-matin-page-7.jpg"/>
+</a>
+<a data-lightbox="articles" href="nice-matin-page-8.jpg">
+<img alt="Nice-Matin page 8" src="nice-matin-page-8.jpg"/>
+</a>
+</div></main>
 
-    <div class="gallery">
-    <a href="nice-matin-page-7.jpg" data-lightbox="articles">
-      <img src="nice-matin-page-7.jpg" alt="Nice-Matin page 7">
-    </a>
-    <a href="nice-matin-page-8.jpg" data-lightbox="articles">
-      <img src="nice-matin-page-8.jpg" alt="Nice-Matin page 8">
-    </a>
-  </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
 </html>
