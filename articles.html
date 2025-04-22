@@ -125,18 +125,6 @@ body.light-mode .logo {
     body.light-mode .intro {
       color: #333 !important;
     }
-
-
-/* Assure la taille uniforme des liens dans le menu */
-header nav ul li a {
-  font-size: 1.1rem !important;
-  font-weight: bold !important;
-  text-decoration: none;
-}
-
-body.light-mode header nav ul li a {
-  color: black !important;
-}
 </style>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -172,9 +160,7 @@ body.light-mode header nav ul li a {
 <body>
 <header>
 <button id="dark-mode-toggle" onclick="toggleDarkMode()">☀️</button>
-<a href="index.html">
-<img alt="Logo Sone Events" class="logo" src="logo.png"/>
-</a>
+<a href="index.html"><img alt="Logo Sone Events" class="logo" src="logo.png"/>
 <nav>
 <ul>
 <li><a href="index.html">Accueil</a></li>
@@ -183,7 +169,7 @@ body.light-mode header nav ul li a {
 <li><a href="contact.html">Contact</a></li>
 </ul>
 </nav>
-</header>
+</a></header>
 <h1>Revue de presse</h1>
 <p class="intro">
     Voici quelques extraits de presse mettant en avant l'engagement et les événements animés par Sone Events.
