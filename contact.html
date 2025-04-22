@@ -151,21 +151,26 @@ button {
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
 .btn-call:hover,
 button:hover {
   background-color: #e6be00;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 .btn-call-large {
   font-size: 1.2rem;
   padding: 14px 28px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
-
   </style>
 
  <script>
@@ -224,10 +229,14 @@ button:hover {
       <input type="text" placeholder="Nom" required>
       <input type="email" placeholder="Email" required>
       <textarea placeholder="Votre message" rows="5" required></textarea>
-      <button type="submit">Envoyer</button>
-     <p style="margin-top: 40px; text-align: center;">
+      <button type="submit" class="btn-call btn-call-large">
+  ✉️ Envoyer
+</button>
+    <p style="margin-top: 40px; text-align: center;">
   <a href="tel:+33775721589">
-    <button type="button" class="btn-call btn-call-large">Nous appeler</button>
+    <button type="button" class="btn-call btn-call-large">
+      📞 Nous appeler
+    </button>
   </a>
   </a>
   </main>
