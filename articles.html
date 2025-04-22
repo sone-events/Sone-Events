@@ -41,7 +41,6 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1rem;
     }
     h1 {
       text-align: center;
@@ -126,14 +125,18 @@ body.light-mode .logo {
     body.light-mode .intro {
       color: #333 !important;
     }
-    
-    main {
-  padding: 40px;
-  text-align: center;
-  max-width: 1000px;
-  margin: 0 auto;
-    }
 
+
+/* Assure la taille uniforme des liens dans le menu */
+header nav ul li a {
+  font-size: 1.1rem !important;
+  font-weight: bold !important;
+  text-decoration: none;
+}
+
+body.light-mode header nav ul li a {
+  color: black !important;
+}
 </style>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -180,19 +183,19 @@ body.light-mode .logo {
 <li><a href="contact.html">Contact</a></li>
 </ul>
 </nav>
-</header><main style="padding: 40px; text-align: center;"><h1>Revue de presse</h1><p class="intro">
+</header>
+<h1>Revue de presse</h1>
+<p class="intro">
     Voici quelques extraits de presse mettant en avant l'engagement et les événements animés par Sone Events.
-  </p><div class="gallery">
+  </p>
+<div class="gallery">
 <a data-lightbox="articles" href="nice-matin-page-7.jpg">
 <img alt="Nice-Matin page 7" src="nice-matin-page-7.jpg"/>
 </a>
 <a data-lightbox="articles" href="nice-matin-page-8.jpg">
 <img alt="Nice-Matin page 8" src="nice-matin-page-8.jpg"/>
 </a>
-</div></main>
-
-
-
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
 </html>
