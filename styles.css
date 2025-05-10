@@ -62,6 +62,12 @@ footer {
   background-color: #222;
   color: #eee;
 }
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
 @keyframes appear-zoom {
   0% {
     transform: scale(0.8);
