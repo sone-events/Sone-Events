@@ -62,3 +62,10 @@ footer {
   background-color: #222;
   color: #eee;
 }
+.logo-video {
+  width: 250px;
+  max-width: 90%;
+  display: block;
+  margin: 30px auto 50px;
+  border-radius: 12px;
+}
