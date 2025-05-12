@@ -71,6 +71,9 @@ footer {
 body.light-mode .video-container {
   background-color: #fff; /* fond en mode clair */
 }
+body.light-mode .logo-video {
+  filter: invert(1);
+}
 .logo-video {
   background-color: #111;
   width: 400px;
