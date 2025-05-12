@@ -69,7 +69,7 @@ footer {
   margin: 40px 0;
 }
 body.light-mode .video-container {
-  background-color: #fff; /* fond en mode clair */
+  background-color: #f2f2f2; /* fond en mode clair */
 }
 body.light-mode .logo-video {
   filter: invert(1);
