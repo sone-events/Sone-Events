@@ -68,6 +68,9 @@ footer {
   align-items: center;
   margin: 40px 0;
 }
+body.light-mode .logo-video {
+  filter: invert(1);
+}
 .logo-video {
   background-color: #111;
   width: 400px;
