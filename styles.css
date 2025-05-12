@@ -68,12 +68,6 @@ footer {
   align-items: center;
   margin: 40px 0;
 }
-body.light-mode .video-container {
-  background-color: #fff;
-}
-body.light-mode .logo-video {
-  filter: invert(1);
-}
 .logo-video {
   background-color: #111;
   width: 400px;
@@ -82,4 +76,10 @@ body.light-mode .logo-video {
   display: block;
   margin: 30px auto 50px;
   border-radius: 12px;
+}
+body.light-mode .video-container {
+  background-color: #fff;
+}
+body.light-mode .logo-video {
+  filter: invert(1);
 }
